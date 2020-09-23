@@ -1,5 +1,5 @@
 # nttbot
-a "name that tune" game bot (in progress). play a song-guessing game with your friends in discord using a given spotify playlist, in addition to other practical bot functions.
+a "name that tune" game bot (in progress). play a song-guessing game with your friends in discord using a given spotify playlist, in addition to other practical and fun bot functions.
 
 # current commands
 the default command prefix is '!'.
