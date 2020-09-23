@@ -1,6 +1,12 @@
+import discord
+import youtube_dl
 from discord.ext import commands
 from discord.utils import get
 import os
+import shutil
+from os import system
+
+THIS_FOLDER = os.path.dirname('namethattune')
 
 class Music(commands.Cog):
     def __init__(self, bot):
@@ -46,5 +52,6 @@ class Music(commands.Cog):
         else:
             print("Bot cannot leave channel.")
             await ctx.send("Cannot leave channel (no voice channel recognized).", delete_after = 5.0)
+
 def setup(bot):
     bot.add_cog(Music(bot))

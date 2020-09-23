@@ -1,5 +1,5 @@
 #a bunch of random tasks that can be called by users.
-
+import discord
 from discord.ext import commands
 from discord.utils import get
 import os
@@ -34,9 +34,9 @@ class Fun(commands.Cog):
         def check(m):
             return m.author.id == ctx.author.id and m.content.isdigit() and \
                     m.channel.id == ctx.channel.id
-        await ctx.send("Type a number.")
+        await ctx.send("Type a number.", delete_after = 10.0)
         msg1 = await self.bot.wait_for("message", check=check)
-        await ctx.send("Type a second, larger number.")
+        await ctx.send("Type a second, larger number.", delete_after = 10.0)
         msg2 = await self.bot.wait_for("message", check=check)
         x = int(msg1.content)
         y = int(msg2.content)
@@ -50,7 +50,6 @@ class Fun(commands.Cog):
     @commands.command(aliases=['slots', 'bet'])
     @commands.cooldown(rate=1, per=3.0, type=commands.BucketType.user)
     async def slot(self, ctx):
-        """ Roll the slot machine """
         emojis = "🍎🍊🍐🍋🍉🍇🍓🍒"
         a = random.choice(emojis)
         b = random.choice(emojis)
@@ -64,6 +63,40 @@ class Fun(commands.Cog):
             await ctx.send(f"{slotmachine} 2 in a row, you won! 🎉")
         else:
             await ctx.send(f"{slotmachine} No match, you lost 😢")
+
+    #8 ball, implemented from/slightly modified version of alexflipnote's fun.py cog
+    @commands.command(aliases=['8ball'])
+    async def eightball(self, ctx, *, question: commands.clean_content):
+        ballresponse = ['As I see it, yes.', 'Ask again later.', 'Better not tell you now.',
+                    'Cannot predict now.', 'Concentrate and ask again.', 'Don’t count on it.',
+                    'It is certain.', 'It is decidedly so.', 'Most likely.', 'My reply is no.',
+                    'My sources say no.', 'Outlook not so good.', 'Outlook good.', 'Reply hazy, try again.',
+                    'Signs point to yes.', 'Very doubtful.', 'Without a doubt.', 'Yes.', 'Yes – definitely.',
+                    'You may rely on it.'
+                    ]
+        answer = random.choice(ballresponse)
+        await ctx.send(f"🎱 Question: {question}\nAnswer: {answer}")
+
+    @commands.command(alias = ['juul'])
+    async def juul(self, ctx):
+        juul = os.path.join('/Users/joeyquismorio/namethattunebot/images/juul.jpg')
+        await ctx.send(file=discord.File(juul))
+
+    @commands.command(aliases = ['poggers'])
+    async def pog(self, ctx):
+        await ctx.send('https://www.youtube.com/watch?v=1J0itefqRDU')
+
+    @commands.command(alias = ['hannibal'])
+    async def hannibal(self, ctx):
+        await ctx.send('http://www.youtube.com/watch?v=Op_dQ0KgXYk')
+
+    @commands.command(aliases = ['pretzels'])
+    async def pretzel(self, ctx):
+        await ctx.send('http://www.youtube.com/watch?v=Sg2im6mi0eo')
+
+    @commands.command(aliases = ['asshole'])
+    async def lucas(self, ctx):
+        await ctx.send('lucas')
 
 def setup(bot):
     bot.add_cog(Fun(bot))
