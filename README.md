@@ -19,3 +19,6 @@ the default command prefix is '!'.
 # to add
 - spotipy compatibility
 - playlist implementation
+
+## considerations 
+- lavalink compatibility?
