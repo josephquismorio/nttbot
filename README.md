@@ -8,7 +8,12 @@ the default command prefix is '!'.
 - !rng is a random number generator that gives you a random number given two inputs.
 - !slot (or !slots/!bet) is a slot machine emulator.
 - !yts is a youtube search engine that provides users with the first result of a youtube search.
-- !ql (or !quiplash) is a quiplash (jackbox game) emulator.
+- !juul is just a dumb little image pop-up.
+- !hannibal 
+- !pretzel (or !pretzel)
+- !lucas
+### !ql or !quiplash
+"quiplash" is a madlibs-esque jackbox game. a game can be created with !ql or !quiplash, and can be started with !start. to answer prompt a, type your answer after !a (same goes for prompt b, except with command !b).
 
 ## voice
 - !join allows the bot to join a user's voice channel.
