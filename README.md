@@ -8,7 +8,7 @@ the default command prefix is '!'.
 - !rng is a random number generator that gives you a random number given two inputs.
 - !slot (or !slots/!bet) is a slot machine emulator.
 - !yts is a youtube search engine that provides users with the first result of a youtube search.
-- !ql (or !quiplash) is a quiplash (jackbox game) emulator 
+- !ql (or !quiplash) is a quiplash (jackbox game) emulator.
 
 ## voice
 - !join allows the bot to join a user's voice channel.
@@ -23,3 +23,4 @@ the default command prefix is '!'.
 
 ## considerations 
 - lavalink compatibility?
+- more jackbox games? (e.g. break the internet)
