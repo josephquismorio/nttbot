@@ -7,6 +7,7 @@ the default command prefix is '!'.
 ## fun
 - !rng is a random number generator that gives you a random number given two inputs.
 - !slot (or !slots/!bet) is a slot machine emulator.
+- !8ball (or !eightball) is an 8 ball emulator. ask it a question!
 - !yts is a youtube search engine that provides users with the first result of a youtube search.
 - !juul is just a dumb little image pop-up.
 - !hannibal 
