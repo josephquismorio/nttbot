@@ -61,10 +61,10 @@ class Quiplash(commands.Cog):
     def redditPrompts(self, numPlayers):
         numPrompts = numPlayers*2*4
 
-        reddit = praw.Reddit(client_id="00tWIoTBEUTuFQ",
-                            client_secret = "tyOPiMx4eg6ZsYri0T8V77pQHt8",
-                            username = "jiromiyoshi",
-                            password = "Joeyrox13!",
+        reddit = praw.Reddit(client_id="************", #insert your own info here bro wtf
+                            client_secret = "***********",
+                            username = "*******",
+                            password = "*******",
                             user_agent = "quiplash")
         sub = reddit.subreddit('AskOuija')
         hot = sub.hot(limit=numPrompts)
