@@ -22,6 +22,8 @@ the default command prefix is '!'.
 
 ## misc
 - !ping gives a user their ping value in ms.
+- !h gives user a list of commands.
+- !shutdown is an owner permission that allows the bot owner to shut off the bot.
 
 # to add
 - spotipy compatibility
