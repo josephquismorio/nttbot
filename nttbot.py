@@ -13,6 +13,7 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 
 #command prefix is set to '!'. commands are not case sensitive
 bot = commands.Bot(command_prefix = '!', case_insensitive = True)
+bot.remove_command("help")
 
 #confirm ntt bot works
 @bot.event
@@ -24,7 +25,7 @@ async def on_ready():
     bot.load_extension('cogs.quiplash')
 
 #help command, with
-@bot.command()
+@bot.command(aliases = ['help'])
 async def h(ctx):
     embed = discord.Embed(title = 'Commands')
     embed.add_field(name = '!ping', value = 'Gives a user their ping value in ms.', inline = False)
